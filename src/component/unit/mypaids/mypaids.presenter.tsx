@@ -59,6 +59,3 @@ export default function MypaidsPresenter(props: IMypaidsPresenter) {
     </S.WrapperOut>
   );
 }
-
-{
-}

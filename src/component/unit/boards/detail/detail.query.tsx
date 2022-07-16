@@ -35,3 +35,19 @@ export const FETCH_USER_LIKE = gql`
     }
   }
 `;
+
+export const FETCH_BOARDS_PAGE = gql`
+  query fetchBoardsPage(
+    $page: Int
+    $category: String
+    $search: String
+    $sortType: String
+  ) {
+    fetchBoardsPage(
+      page: $page
+      category: $category
+      search: $search
+      sortType: $sortType
+    )
+  }
+`;

@@ -16,7 +16,7 @@ export interface IMypaidsPresenter {
 
 export interface IMyPaymentHistory {
   data?: Pick<IQuery, "fetchPayments"> | undefined;
-  fecthMore: (
+  fecthMore?: (
     fetchMoreOptions: FetchMoreQueryOptions<OperationVariables, any> &
       FetchMoreOptions<any, OperationVariables>
   ) => void;
