@@ -214,3 +214,5 @@ export const HiddenBox = styled.div`
 `;
 
 export const WeatherBox = styled.div``;
+export const Warrap = styled.div``;
+export const WarrapIn = styled.span``;

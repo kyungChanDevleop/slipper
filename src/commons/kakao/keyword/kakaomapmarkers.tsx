@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export default function KakaomapMarks(props: MarkerProps) {
   return (
-    <>
+    <S.Warrap>
       {props.data?.fetchBoardsPage &&
         !props.isActive1 &&
         props.data?.fetchBoardsPage.map((el, index: number) => (
@@ -30,7 +30,7 @@ export default function KakaomapMarks(props: MarkerProps) {
         ))}
 
       {props.markers.map((marker: any, index: number) => (
-        <>
+        <S.WarrapIn key={index}>
           {marker.group_code === "FD6" && (
             <S.KakaoMapMarker
               // key={`marker-${marker.content}-${marker.position.lng},${marker.position.lng}`}
@@ -336,8 +336,8 @@ export default function KakaomapMarks(props: MarkerProps) {
                 props.contentFlag && <Contents marker={marker} />}
             </S.KakaoMapMarker>
           )}
-        </>
+        </S.WarrapIn>
       ))}
-    </>
+    </S.Warrap>
   );
 }
