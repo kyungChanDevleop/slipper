@@ -59,11 +59,11 @@ export default function ImageProfile(props: IImageProfileProps) {
     fileRef.current?.click();
   };
 
-  const aaa = JSON.stringify(props.fileUrl);
+  const file = JSON.stringify(props.fileUrl);
 
   return (
     <>
-      {aaa !== `[""]` ? (
+      {file !== `[""]` ? (
         <UploadImage onClick={onClickImgUpload} src={`${props.fileUrl}`} />
       ) : (
         <UploadButton onClick={onClickImgUpload}>

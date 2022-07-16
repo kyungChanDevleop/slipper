@@ -16,13 +16,13 @@ interface ILayoutProps {
 
 const HIDDEN_HEADERS = [
   "/",
-  "/login",
-  "/join",
-  "/settimeout",
-  "/map",
-  "/boards",
+  "/login/",
+  "/join/",
+  "/settimeout/",
+  "/map/",
+  "/boards/",
 ];
-const HIDDEN_FOOTER = ["/login", "/join", "/settimeout", "/map"];
+const HIDDEN_FOOTER = ["/login/", "/join/", "/settimeout/", "/map/"];
 
 export default function Layout(props: ILayoutProps) {
   const router = useRouter();

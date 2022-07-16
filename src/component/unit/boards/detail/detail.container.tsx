@@ -15,6 +15,7 @@ import { FETCH_USER } from "../../login/login.queries";
 import { CLICK_LIKE } from "../list/list.query";
 import DetailPresenter from "./detail.presenter";
 import { DELETE_BOARD, FETCH_BOARD, FETCH_USER_LIKE } from "./detail.query";
+import { request } from "graphql-request";
 
 export default function DetailContainer() {
   const router = useRouter();
@@ -113,3 +114,25 @@ export default function DetailContainer() {
     />
   );
 }
+
+// export const getServerSideProps = async (context: any) => {
+//   // 데이터를 요청할 것
+//   // const { data } = useQuery(FETCH_BOARD) - 이건 안됨
+//   const result = await request(
+//     "https://backend06.codebootcamp.co.kr/graphql",
+//     FETCH_BOARD,
+//     {
+//       boardId: context.query.boardid,
+//     }
+//   );
+
+//   return {
+//     props: {
+//       myboardData: {
+//         title: result.fetchBoard.title,
+//         contents: result.fetchBoard.contents,
+//         images: result.fetchBoard.images,
+//       },
+//     },
+//   };
+// };

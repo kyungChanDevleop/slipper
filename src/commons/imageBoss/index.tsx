@@ -35,7 +35,7 @@ const UploadFileHidden = styled.input`
 `;
 interface IImageBossProps {
   onChangeBusinessFileUrl: (fileUrl: string) => void;
-  businessfileUrl?: string[];
+  businessfileUrl?: string[] | undefined;
   isButton?: boolean;
   isShow: boolean;
 }
@@ -63,9 +63,11 @@ export default function ImageBoss(props: IImageBossProps) {
     fileRef.current?.click();
   };
 
+  const file = JSON.stringify(props.businessfileUrl);
+
   return (
     <>
-      {props.businessfileUrl[0] !== "" ? (
+      {file !== `[""]` ? (
         <UploadImage
           onClick={onClickImgUpload}
           src={`${props.businessfileUrl}`}
